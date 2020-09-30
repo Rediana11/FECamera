@@ -1,0 +1,33 @@
+<div modal-body>
+<form  [formGroup]="addEditCameraForm">
+<div class="form-content">
+<div class="form-group">
+    <label class="form-control-label">Name</label>
+    <input  type="text"  class="form-control  " [ngStyle]="{'borderColor':addEditCameraForm.controls.modelControl.touched&&addEditCameraForm.controls.modelControl.errors!=null? '#dc3545':'#ced4da'}" placeholder="Name *" formControlName="nameControl">
+    <div style="color:#dc3545" *ngIf="addEditCameraForm.controls.nameControl.touched&&addEditCameraForm.controls.nameControl.errors!=null">
+        Name field is required. 
+    </div>
+    <label class="form-control-label">Model</label>
+    <input  type="text" [ngStyle]="{'borderColor':addEditCameraForm.controls.modelControl.touched&&addEditCameraForm.controls.modelControl.errors!=null? '#dc3545':'#ced4da'}" class="form-control  " placeholder="Model *" formControlName="modelControl">
+    <div style="color:#dc3545" *ngIf="addEditCameraForm.controls.modelControl.touched&&addEditCameraForm.controls.modelControl.errors!=null">
+        Model field is required. 
+    </div>
+    <label class="form-control-label">IP</label>
+    <input  type="text" [ngStyle]="{'borderColor':addEditCameraForm.controls.ipControl.touched&&addEditCameraForm.controls.ipControl.errors!=null? '#dc3545':'#ced4da'}" class="form-control  " placeholder="IP *" formControlName="ipControl">
+    <div style="color:#dc3545" *ngIf="addEditCameraForm.controls.ipControl.touched&&addEditCameraForm.controls.ipControl.errors!=null">
+        Ip field is required. 
+    </div>
+    <label class="form-control-label">Resolution</label>
+    <input  type="text" [ngStyle]="{'borderColor':addEditCameraForm.controls.ipControl.touched&&addEditCameraForm.controls.ipControl.errors!=null? '#dc3545':'#ced4da'}" class="form-control  " placeholder="Resolution *" formControlName="resolutionControl">
+    <div style="color:#dc3545" *ngIf="addEditCameraForm.controls.resolutionControl.touched&&addEditCameraForm.controls.resolutionControl.errors!=null">
+        Resolution field is required. 
+    </div>
+</div>
+   <div>
+   <button type="submit" [disabled]="addEditCameraForm.invalid"class="btn btn-success" (click)="addEditUser()">Save</button>
+   <button type="button" class="btn btn-danger" (click)="onClose()">Close</button>     
+</div>
+    </div>
+    
+</form>
+</div>

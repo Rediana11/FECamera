@@ -1,0 +1,8 @@
+<app-navbar>
+</app-navbar>
+<app-sidebar (collapsedEvent)="receiveCollapsed($event)"></app-sidebar>
+<section class="main-container" [ngClass]="{collapsed: collapedSideBar}">
+  <!-- <app-alert [timeoutSec]="5000" [messageText]="messageText" [messageTitle]="messageTitle" [messageType]="messageType"></app-alert> -->
+   <router-outlet></router-outlet> 
+  <app-footer></app-footer>
+</section>
